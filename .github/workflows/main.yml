@@ -2,7 +2,7 @@ name: Build the application
 on: 
   push: 
     branches: 
-      - feature-*
+      - Feature-*
   pull_request: 
     branches: 
       - master
