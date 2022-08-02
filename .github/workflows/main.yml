@@ -27,4 +27,4 @@ jobs:
       uses: KuntalGhoshGM/ms-teams-notification@v1.1
       with:
        webhook_uri: ${{ secrets.MS_TEAMS_WEBHOOK_URI }}
-       message: "This is from custom GitHub actions created by Kuntal."
+       message: "GitHub Action number ${{github.run_number}} for ${{github.repository}} triggered by ${{github.actor}} is completed with ${{needs.build.result}} status"
