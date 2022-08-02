@@ -17,9 +17,12 @@ jobs:
       with: 
         dotnet-version: '6.0.x'
     - name: list current directory
-      run: dotnet build
+      run: |
+       dotnet build
+       exit 1
   notify:
    runs-on: ubuntu-latest
+   if: always()
    needs:
     - build
    steps:
